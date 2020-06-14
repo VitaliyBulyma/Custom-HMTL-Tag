@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Custom Tag</title>
+</head>
+<body>
+      <!-- name-tag Custom HTML tag-->
+  <template id="nameTag" class="d-none">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #cont {
+        width: 300px;
+        padding-bottom: 5px;
+        background: #a43f49;
+        border-radius: 10px;
+        position: fixed;
+        top: 5%;
+        right: 5vw;
+        z-index: 5;
+
+      }
+
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 94%;
+        height: 100px;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      h1 {
+        font-size: 30px;
+        text-align: center;
+        color: white;
+      }
+
+      p {
+        margin-left: 10px;
+        color: #a43f49;
+        font-size: 20px;
+      }
+
+      #formH {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        font-style: italic;
+        letter-spacing: 3px;
+      }
+
+      #close {
+        float: right;
+        font-size: large;
+        color: white;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    </style>
+
+    <div id="cont">
+      <div id="close" title="Close">X</div>
+      <h1>Welcome To My Portfolio</h1>
+      <div class="center">
+        <p>My name is </p>
+        <div id="formH">
+          <h2>
+            <slot name="title"></slot>            
+          </h2>
+        </div>
+      </div>
+    </div>
+  </template>
+  <name-tag id="uname" class="d-none d-lg-block">
+    <span slot="title">Vitaliy Bulyma</span>
+  </name-tag>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/8-modules-logic.js"></script>
+  <script src="./assets/js/8-modules-module.js"></script>
+  <!--End of name-tag custom HTML tag-->
+</body>
+</html>
