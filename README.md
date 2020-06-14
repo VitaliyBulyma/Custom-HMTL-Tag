@@ -1,4 +1,4 @@
-# Custom HMTL Tag
+# Custom HTML Tag
 
 A JavaScript mini-project to create a custom HTML element.
 
